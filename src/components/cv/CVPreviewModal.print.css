@@ -1,0 +1,65 @@
+@media print {
+  body * {
+    visibility: hidden !important;
+  }
+  .cv-preview, .cv-preview * {
+    visibility: visible !important;
+  }
+  .cv-preview {
+    position: absolute !important;
+    left: 0;
+    top: 0;
+    width: 210mm !important;
+    max-width: 210mm !important;
+    min-width: 0 !important;
+    margin: 0 auto !important;
+    background: #fff !important;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    z-index: 9999 !important;
+    height: auto !important;
+    min-height: initial !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+  .cv-section, .cv-header {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+  }
+  /* Hide modal overlays, scrollbars, and UI */
+  .DialogContent, .DialogHeader, .DialogTitle, .DialogDescription, .DialogOverlay, .Dialog, .modal, .bg-gray-50, .shadow-xl, .rounded-xl, .rounded-lg, .border, .p-4, .p-6, .space-y-6, .flex, .items-center, .gap-2, .justify-between, .justify-center, .gap-4, .mb-4, .mt-2, .mt-3, .mb-3, .mb-6, .min-h-screen, .overflow-y-auto, .max-w-6xl, .w-full, .max-h-[90vh], .overflow-y-auto, .print-preview-title, .print-preview-actions, .print-preview-close {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
+
+/* Hide scrollbars globally for print */
+::-webkit-scrollbar {
+  display: none !important;
+}
+
+.cv-watermark {
+  position: fixed !important;
+  left: 0;
+  right: 0;
+  bottom: 24px;
+  width: 210mm !important;
+  text-align: center !important;
+  font-size: 12px !important;
+  color: #888 !important;
+  opacity: 0.7 !important;
+  z-index: 10000 !important;
+  pointer-events: none !important;
+}
+
+@page {
+  size: A4;
+  margin: 24mm 16mm 24mm 16mm;
+} 
